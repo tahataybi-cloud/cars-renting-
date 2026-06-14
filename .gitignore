@@ -1,0 +1,13 @@
+node_modules/
+dist/
+target/
+*.log
+.env
+frontend/build_output.txt
+frontend/tsc_errors.txt
+.idea/
+.vscode/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.DS_Store

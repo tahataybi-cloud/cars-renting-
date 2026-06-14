@@ -1,0 +1,41 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply bg-obsidian text-slate-300;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-obsidian;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-steel rounded-full hover:bg-electric/50 transition-colors;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 122, 255, 0.5), 0 0 20px rgba(0, 122, 255, 0.3);
+  }
+
+  .neon-border {
+    @apply border border-electric/30 hover:border-electric transition-all duration-300;
+    box-shadow: 0 0 0px rgba(0, 122, 255, 0);
+  }
+  
+  .neon-border:hover {
+    box-shadow: 0 0 15px rgba(0, 122, 255, 0.2);
+  }
+}
