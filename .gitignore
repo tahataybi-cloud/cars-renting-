@@ -3,6 +3,7 @@ dist/
 target/
 *.log
 .env
+.vercel/
 frontend/build_output.txt
 frontend/tsc_errors.txt
 .idea/

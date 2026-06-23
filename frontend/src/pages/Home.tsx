@@ -59,11 +59,13 @@ export function Home() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <CyberButton size="lg" className="w-full sm:w-auto px-10 py-5 text-lg">Book Your Journey</CyberButton>
-            <button className="flex items-center space-x-2 px-8 py-5 text-white font-bold hover:text-electric transition-colors group">
+            <Link to="/login" className="w-full sm:w-auto">
+              <CyberButton size="lg" className="w-full px-10 py-5 text-lg">Book Your Journey</CyberButton>
+            </Link>
+            <a href="#fleet" className="flex items-center space-x-2 px-8 py-5 text-white font-bold hover:text-electric transition-colors group">
               <span>Explore Fleet</span>
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </motion.div>
 
@@ -121,7 +123,7 @@ export function Home() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-32 px-6 lg:px-16 space-y-20">
+      <section id="fleet" className="py-32 px-6 lg:px-16 space-y-20">
         <div className="max-w-4xl section-reveal">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">PRECISION <br />MEETS TECHNOLOGY</h2>
           <p className="text-xl text-slate-400">Our platform is built for the high-end mobility era. Every pixel is tuned for performance.</p>
@@ -161,7 +163,9 @@ export function Home() {
           <motion.div whileInView={{ scale: [0.95, 1], opacity: [0, 1] }} className="relative z-10">
             <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">READY TO DRIVE THE FUTURE?</h2>
             <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">Join hundreds of luxury car rental agencies transforming their business with SmartRent.</p>
-            <CyberButton size="lg" glow className="px-12 py-6 text-xl">Get Started Now</CyberButton>
+            <Link to="/login">
+              <CyberButton size="lg" glow className="px-12 py-6 text-xl">Get Started Now</CyberButton>
+            </Link>
           </motion.div>
         </div>
       </section>
